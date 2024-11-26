@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-900;
+  }
+}
+
+@layer components {
+  .form-select {
+    @apply block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-600 text-white rounded-md font-medium hover:bg-gray-700 shadow-sm;
+  }
+}
+
+/* Date Range Picker Styles */
+.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #2563eb;
+  --rdp-background-color: #e0e7ff;
+  margin: 0;
+}
+
+.rdp-custom .rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: #f3f4f6;
+}
+
+.rdp-custom .rdp-day_selected {
+  background-color: var(--rdp-accent-color);
+  color: white;
+}
+
+.rdp-custom .rdp-day_selected:hover {
+  background-color: #1d4ed8;
+}
+
+.rdp-custom .rdp-day_today {
+  font-weight: bold;
+  color: var(--rdp-accent-color);
+}
+
+/* Drag and Drop Styles */
+.dragging {
+  @apply opacity-50 scale-105 shadow-lg;
+  transition: transform 0.2s ease-in-out;
+}
+
+.drag-over {
+  @apply border-2 border-dashed border-blue-400 rounded-lg;
+}
